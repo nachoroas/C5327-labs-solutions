@@ -1,5 +1,5 @@
 # We connect to a (host,port) tuple
-import utils
+import utils.utils as utils
 
 CONNECTION_ADDR = ("cc5327.hackerlab.cl", 5313)
 
