@@ -1,7 +1,7 @@
 # We connect to a (host,port) tuple
 import utils.utils as utils
 
-CONNECTION_ADDR = ("cc5327.hackerlab.cl", 5312)
+CONNECTION_ADDR = ("cc5327.hackerlab.cl", 5313)
 
 if __name__ == "__main__":
     sock_input, sock_output = utils.create_socket(CONNECTION_ADDR)
