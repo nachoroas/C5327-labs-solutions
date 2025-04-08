@@ -1,4 +1,3 @@
-# We connect to a (host,port) tuple
 from utils.utils import create_socket, send_message, hex_to_bytes, bytes_to_hex, split_blocks, join_blocks
 import re
 
