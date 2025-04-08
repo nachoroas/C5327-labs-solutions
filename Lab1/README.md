@@ -80,3 +80,7 @@ def decrypt_block(ciphertext_hex):
 ```
 Después, se hace un bucle que  recorre las posiciones de los bytes a descifrar del último byte (15) hasta el primer byte (0). Dentro se hace un bucle interno probando los 256 valores que puede tomar el byte en cada índice,despues se manda al servidor para obtener una respuesta que diferencia entre un padding valido y uno invalido, luego se usa XOR entre valor interno y bloque previo.
 
+Adicionalmente se tuvo que añadir el caso borde explicado en el foro
+
+### Parte f.-
+Se resumio todo el trabajo en una sola funcion, creando desde la misma el codigo encriptado y llamando a traves de un for la funcion que se utilizo anteriormente par desencriptar un bloque, lamentablemente ya que el tiempo de ejecucion era muy largo ~20min no se logro debuggear lo suficiente para obtener una version funcional de la key del problema ya que en las pocas ejecuciones se hizo fallaba al final 
