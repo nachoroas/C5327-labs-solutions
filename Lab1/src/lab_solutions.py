@@ -2,6 +2,9 @@ import socket
 import descryptor
 import argparse
 import binascii
+import attacker
+import attacker_e
+
 
 # We connect to a (host,port) tuple
 import utils.utils as utils
@@ -92,6 +95,22 @@ def caso_3():
     print("parte c!!")
     print("Esta parte está explicada en su totalidad en el readme")
 
+def caso_4():
+    print("parte d!!")
+    print("Esta parte está explicada en el readme, ejecutando la función descrypt_last_byte(Encyrpt_message) de attacker")
+    attacker.descrypt_byte("e2a0bb3fe8a4ff55ca8e8c7048a521fe99865dead7dc6d2712a7701bb36bf78b2f8c2f11d97e5d2c051c8eb56b91fe61f5c81ba7b5ba6439aeff3a83d50c94f93c91a8fabd7f68916fca94d2178577e8746430a186275287fbf15fcf11f4a71b38d754c60009b4693ee6ba68d1eb3a0958f0f71db7813b2cf993fb99cfd32f04", 15)
+
+def caso_5():
+    print("parte e!!")
+    print("En esta parte, se intenta ejecutar con exito la decifración de un bloque completo, con la misma lógica que para la parte anterior")
+    print("Pero con un archivo attacker modificado, attacker_e.py")
+    print()
+    print("Ejecutando la función descrypt_block de attacker_e")
+    attacker_e.decrypt_block("e2a0bb3fe8a4ff55ca8e8c7048a521fe99865dead7dc6d2712a7701bb36bf78b2f8c2f11d97e5d2c051c8eb56b91fe61f5c81ba7b5ba6439aeff3a83d50c94f93c91a8fabd7f68916fca94d2178577e8746430a186275287fbf15fcf11f4a71b38d754c60009b4693ee6ba68d1eb3a0958f0f71db7813b2cf993fb99cfd32f04")
+
+    print()
+    print()
+    print("La explicación de la función se encuentra en el readme")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Ejecutar pruebas AES-CBC en terminal")
@@ -101,13 +120,12 @@ if __name__ == "__main__":
     cases = {
         1: case_1,
         2: case_2,
+        3: caso_3,
+        4: caso_4,
+        5: caso_5,
     }
 
     if args.case in cases:
         cases[args.case]()
     else:
-        print("Opción inválida. Seleccione un número entre 1 y 8.")
-
-
-
-    
+        print("Opción inválida. Seleccione un número entre 1 y 5.")
